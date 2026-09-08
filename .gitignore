@@ -1,0 +1,12 @@
+# Windows / Google Drive
+desktop.ini
+Thumbs.db
+*.tmp
+~$*
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
