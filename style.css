@@ -1,0 +1,246 @@
+/* =========================================================
+   style.css - Wisata Bunaken
+   ========================================================= */
+
+/* ---- RESET GLOBAL : berlaku untuk SEMUA elemen (*) & <body> ---- */
+* {
+  box-sizing: border-box; /* padding & border tidak menambah lebar */
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #16242b;
+  line-height: 1.6;
+}
+
+/* ---- WARNA & TIPOGRAFI DASAR ---- */
+/* Menata semua judul <h1> <h2> <h3> di halaman */
+h1,
+h2,
+h3 {
+  color: #0e3a4f;
+}
+/* Garis bawah aksen untuk <h2> tiap <section> (Tentang, Daya Tarik, dll.) */
+h2 {
+  border-bottom: 3px solid #0fa9a6;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+/* Menata semua tautan <a> */
+a {
+  color: #1e7fb0;
+}
+/* Wadah tengah untuk tiap <section> di dalam <main> */
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem;
+}
+
+/* ---- HEADER & NAVBAR : <header class="site-header"> + <nav class="site-nav"> ---- */
+.site-header {
+  display: flex; /* brand & menu sebaris */
+  justify-content: space-between; /* brand kiri, menu kanan */
+  align-items: center;
+  background: #0e3a4f;
+  padding: 0.8rem 1.2rem;
+  position: sticky; /* menempel di atas saat scroll */
+  top: 0;
+  z-index: 10;
+}
+/* Judul situs di kiri (<div class="brand">) */
+.brand {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+/* Daftar menu (<nav class="site-nav"> <ul>) */
+.site-nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none; /* hilangkan bullet */
+  margin: 0;
+  padding: 0;
+}
+/* Tautan menu (<nav> ... <a>) */
+.site-nav a {
+  color: #fff;
+  text-decoration: none; /* hilangkan garis bawah */
+}
+.site-nav a:hover {
+  color: #0fa9a6;
+}
+
+/* ---- HERO : <section class="hero"> ---- */
+.sampul {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 5rem 1rem;
+  /* gambar latar (foto bunaken) + overlay gelap agar teks putih terbaca */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("images/bunaken.jpg") center/cover;
+}
+/* Sembunyikan <img> hero karena sudah dipakai sebagai background */
+.hero img {
+  display: none;
+}
+/* Judul & teks di dalam hero (<div class="hero-teks">) */
+.hero h1 {
+  color: #fff; /* menimpa warna h1 global agar putih di atas foto */
+  font-size: 2.4rem;
+  margin: 0 0 0.5rem;
+}
+/* Tombol ajakan (<a class="btn"> di hero) */
+.btn {
+  display: inline-block;
+  background: #e3a64b;
+  color: #16242b;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease; /* perubahan warna halus */
+}
+.btn:hover {
+  background: #d1902f;
+}
+
+/* ---- GRID KARTU : <div class="grid"> pada Daya Tarik & Galeri ---- */
+.grid {
+  display: grid;
+  /* kolom menyesuaikan lebar layar secara otomatis (responsif) */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+/* Kartu daya tarik (<article class="card">) */
+.card {
+  background: #fff;
+  border: 1px solid #dce6ea;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(14, 58, 79, 0.08);
+}
+.card h3 {
+  margin-top: 0;
+}
+
+/* ---- GALERI : <div class="grid galeri"> + <figure> ---- */
+.galeri img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* semua foto seragam ukurannya */
+  border-radius: 10px;
+}
+.galeri figure {
+  margin: 0;
+}
+.galeri figcaption {
+  color: #5a6b74;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+/* Foto unggulan membentang 2 kolom (<figure class="utama">) */
+.galeri .utama {
+  grid-column: span 2;
+}
+
+/* ---- TABEL TIKET : <section id="tiket"> <table> ---- */
+table {
+  width: 100%;
+  border-collapse: collapse; /* satukan garis tabel */
+}
+th,
+td {
+  border: 1px solid #dce6ea;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+/* Baris judul tabel (<thead> <th>) */
+thead th {
+  background: #1e7fb0;
+  color: #fff;
+}
+/* Baris genap selang-seling (zebra) */
+tbody tr:nth-child(even) {
+  background: #eef5f8;
+}
+
+/* ---- FORMULIR : <section id="pesan"> <form> ---- */
+/* Kotak pengelompokan (<fieldset> <legend>) */
+fieldset {
+  border: 1px solid #dce6ea;
+  border-radius: 10px;
+  padding: 1.2rem;
+}
+legend {
+  font-weight: 700;
+  color: #1e7fb0;
+  padding: 0 0.5rem;
+}
+/* Label tiap input (<label>) turun ke baris sendiri */
+label {
+  display: block;
+  font-weight: 600;
+  margin: 0.7rem 0 0.3rem;
+}
+/* Kolom isian (<input> <select> <textarea>) selebar penuh */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #c7d0dc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+textarea {
+  resize: vertical;
+}
+/* Tombol kirim (<button type="submit">) */
+button {
+  margin-top: 1rem;
+  background: #0fa9a6;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+button:hover {
+  background: #0c8a87;
+}
+
+/* ---- FOOTER : <footer class="site-footer"> ---- */
+.site-footer {
+  background: #0e3a4f;
+  color: #cfe0e7;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.site-footer a {
+  color: #0fa9a6;
+}
+
+/* ---- RESPONSIF (mobile-first) ---- */
+/* Semua gambar (<img>) tidak melebihi wadahnya di layar kecil */
+img {
+  max-width: 100%;
+}
+/* Layar kecil (HP): navbar <header> menumpuk ke bawah */
+@media (max-width: 767px) {
+  .site-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+/* Tablet ke atas: navbar kembali menyamping */
+@media (min-width: 768px) {
+  .site-header {
+    flex-direction: row;
+  }
+}
+
+/* =========== SELESAI =========== */

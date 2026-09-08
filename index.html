@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Profil wisata Taman Nasional Bunaken." />
+    <title>Wisata Bunaken - Surga Bawah Laut Sulut</title>
+    <!--<link rel="stylesheet" href="style.css" />-->
+  </head>
+  <body>
+    <!-- ===== HEADER & NAVIGASI ===== -->
+    <header class="site-header">
+      <div class="brand">Wisata Bunaken</div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#daya-tarik">Daya Tarik</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#tiket">Tiket</a></li>
+          <li><a href="#pesan">Pesan</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== SAMPUL ===== -->
+    <section class="sampul">
+      <img src="images/bunaken.jpg" alt="Panorama bawah laut Bunaken" />
+      <div class="hero-teks">
+        <h1>Taman Nasional Bunaken</h1>
+        <p>Surga bawah laut di Teluk Manado, Sulawesi Utara.</p>
+        <a class="btn" href="#pesan">Pesan Kunjungan</a>
+      </div>
+    </section>
+
+    <main>
+      <!-- ===== TENTANG ===== -->
+      <section id="tentang">
+        <h2>Tentang Bunaken</h2>
+        <p><strong>Bunaken</strong> adalah pulau di Teluk Manado yang menjadi bagian dari <em>Taman Nasional Bunaken</em>. Kawasan ini terkenal dengan terumbu karang dan keanekaragaman hayati lautnya.</p>
+      </section>
+
+      <!-- ===== DAYA TARIK (KARTU) ===== -->
+      <section id="daya-tarik">
+        <h2>Daya Tarik</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Diving &amp; Snorkeling</h3>
+            <p>Dinding karang (drop-off) yang memukau.</p>
+          </article>
+          <article class="card">
+            <h3>Keanekaragaman Hayati</h3>
+            <p>Bagian dari kawasan Coral Triangle.</p>
+          </article>
+          <article class="card">
+            <h3>Panorama &amp; Sunset</h3>
+            <p>Pemandangan laut dan matahari terbenam.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== GALERI ===== -->
+      <section id="galeri">
+        <h2>Galeri</h2>
+        <div class="grid galeri">
+          <figure class="utama">
+            <img src="images/karang1.jpg" alt="Snorkeling di terumbu karang Bunaken" />
+            <figcaption>Snorkeling di terumbu karang</figcaption>
+          </figure>
+          <figure>
+            <img src="images/karang2.jpg" alt="Terumbu karang berwarna-warni" />
+            <figcaption>Terumbu karang</figcaption>
+          </figure>
+          <figure>
+            <img src="images/penyu1.jpg" alt="Penyu laut" />
+            <figcaption>Penyu laut</figcaption>
+          </figure>
+          <figure>
+            <img src="images/penyu2.jpg" alt="Penyu di antara karang" />
+            <figcaption>Penyu &amp; karang</figcaption>
+          </figure>
+          <figure>
+            <img src="images/perahu1.jpg" alt="Perahu wisata di tepi pantai" />
+            <figcaption>Perahu wisata</figcaption>
+          </figure>
+          <figure>
+            <img src="images/perahu2.jpg" alt="Perahu di perairan jernih" />
+            <figcaption>Perairan jernih</figcaption>
+          </figure>
+          <figure>
+            <img src="images/matahari1.jpg" alt="Matahari terbenam di dermaga" />
+            <figcaption>Sunset di dermaga</figcaption>
+          </figure>
+          <figure>
+            <img src="images/matahari2.jpg" alt="Matahari terbenam di laut" />
+            <figcaption>Sunset</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ===== TABEL HARGA TIKET ===== -->
+      <section id="tiket">
+        <h2>Harga Tiket (contoh)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Layanan</th>
+              <th>Keterangan</th>
+              <th>Tarif</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tiket Masuk</td>
+              <td>Per orang</td>
+              <td>Rp 25.000</td>
+            </tr>
+            <tr>
+              <td>Sewa Snorkeling</td>
+              <td>Per set</td>
+              <td>Rp 50.000</td>
+            </tr>
+            <tr>
+              <td>Perahu</td>
+              <td>Per trip</td>
+              <td>Rp 300.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ===== FORMULIR PEMESANAN ===== -->
+      <section id="pesan">
+        <h2>Pesan Kunjungan</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Data Pengunjung</legend>
+
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="tgl">Tanggal Kunjungan</label>
+            <input type="date" id="tgl" name="tgl" />
+
+            <label for="jml">Jumlah Orang</label>
+            <input type="number" id="jml" name="jml" min="1" max="20" />
+
+            <label for="paket">Paket</label>
+            <select id="paket" name="paket">
+              <option>Snorkeling</option>
+              <option>Diving</option>
+              <option>Island Tour</option>
+            </select>
+
+            <label for="catatan">Catatan</label>
+            <textarea id="catatan" name="catatan" rows="3"></textarea>
+
+            <button type="submit">Kirim Pesanan</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <p>Dikelola oleh Kelas Web Design</p>
+      <p>Email: <a href="mailto:info@bunaken.example">info@bunaken.example</a></p>
+      <p>Telp: <a href="tel:+62431000000">0812-4834-0906</a></p>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+    </footer>
+  </body>
+</html>
